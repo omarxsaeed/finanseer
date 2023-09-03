@@ -1,4 +1,20 @@
 module.exports = {
+  settings: {
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"],
+    },
+    "import/resolver": {
+      alias: {
+        map: [["@", "./src"]],
+        extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
+      },
+      typescript: {
+        // alwaysTryTypes: true,
+        // project: "packages/*/tsconfig.json",
+      },
+    },
+  },
   env: {
     browser: true,
     es2021: true,
@@ -22,22 +38,6 @@ module.exports = {
       },
     },
   ],
-  settings: {
-    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
-    "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"],
-    },
-    "import/resolver": {
-      alias: {
-        map: [["@", "./src"]],
-        extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
-      },
-      typescript: {
-        alwaysTryTypes: true,
-        project: "packages/*/tsconfig.json",
-      },
-    },
-  },
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
@@ -45,13 +45,7 @@ module.exports = {
     project: ["./tsconfig.json", "./tsconfig.node.json"],
     tsconfigRootDir: __dirname,
   },
-  plugins: [
-    "react",
-    "@typescript-eslint",
-    "import",
-    "eslint-import-resolver-alias",
-    "prettier",
-  ],
+  plugins: ["react", "@typescript-eslint", "import", "prettier"],
   rules: {
     "import/extensions": [
       "error",
