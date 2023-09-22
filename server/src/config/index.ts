@@ -13,7 +13,8 @@ const config = {
     HOST: process.env.HOST || "localhost",
     PORT: parseInt(process.env.PORT!, 10) || 8000
   },
-  LOG_LEVEL: process.env.LOG_LEVEL || "info"
+  LOG_LEVEL: process.env.LOG_LEVEL || "info",
+  MONGO_URL: process.env.MONGO_URL || "mongodb://localhost:27017/test"
 };
 
 export default config;
