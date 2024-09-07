@@ -7,8 +7,8 @@ const connectDatabase = async () => {
   try {
     const db = await mongoose.connect(config.MONGO_URL);
     console.log("Database connected");
-    await dropDatabase(db.connection);
-    await seedDatabase(KPI, kpis);
+    // await dropDatabase(db.connection);
+    // await seedDatabase(KPI, kpis);
   } catch (error) {
     console.log(error);
     process.exit(1);
