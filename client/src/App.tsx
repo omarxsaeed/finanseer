@@ -3,7 +3,7 @@ import { ThemeProvider, CssBaseline, Box } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { themeSettings } from "./theme";
-import Navbar from "./components/navbar";
+import Navbar from "./scenes/navbar";
 import Dashboard from "./scenes/dashboard";
 
 function App() {
