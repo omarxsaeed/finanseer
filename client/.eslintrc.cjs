@@ -38,18 +38,6 @@ module.exports = {
       },
     },
   ],
-  settings: {
-    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
-    "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"],
-    },
-    "import/resolver": {
-      alias: {
-        map: [["@", "./src"]],
-        extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
-      },
-    },
-  },
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
@@ -61,7 +49,7 @@ module.exports = {
   rules: {
     "import/extensions": [
       "error",
-      "ignorePackages",
+      "never",
       {
         js: "never",
         jsx: "never",
