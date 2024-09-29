@@ -39,3 +39,19 @@ export interface GetKpisResponse {
   message: string;
   status: string;
 }
+
+export interface Product {
+  id: string;
+  _id: string;
+  __v: number;
+  price: number;
+  expense: number;
+  transacations: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+export interface GetProductsResponse {
+  data: Product[];
+  message: string;
+  status: string;
+}
